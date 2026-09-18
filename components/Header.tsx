@@ -30,61 +30,68 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full border-b bg-stone-50/95 backdrop-blur transition-shadow ${
-        scrolled ? "border-stone-200 shadow-sm" : "border-transparent"
-      }`}
-    >
-      <Container className="flex h-16 items-center justify-between gap-4 sm:h-20">
-        <Link href="#top" className="shrink-0">
-          <Logo priority className="h-8 w-auto sm:h-9" />
-        </Link>
+    <header className="sticky top-0 z-50 w-full pt-3 sm:pt-4">
+      <Container>
+        <div
+          className={`flex h-14 items-center justify-between gap-4 rounded-2xl border px-3 backdrop-blur-xl transition-all duration-300 sm:h-16 sm:px-4 ${
+            scrolled
+              ? "border-stone-200 bg-white/85 shadow-lg shadow-stone-900/5"
+              : "border-stone-200/60 bg-white/60 shadow-sm shadow-stone-900/2"
+          }`}
+        >
+          <Link href="#top" className="shrink-0 pl-1">
+            <Logo priority className="h-7 w-auto sm:h-8" />
+          </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex xl:gap-7">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-stone-600 transition-colors hover:text-stone-950"
+          <nav className="hidden items-center gap-0.5 lg:flex xl:gap-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="group relative rounded-full px-3.5 py-2 text-sm font-medium text-stone-600 transition-colors hover:text-stone-950"
+              >
+                {t(`nav.${link.key}`)}
+                <span className="pointer-events-none absolute inset-x-3.5 -bottom-px h-px origin-center scale-x-0 bg-accent transition-transform duration-300 group-hover:scale-x-100" />
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <button
+              type="button"
+              onClick={toggle}
+              className="hidden rounded-full border border-stone-200 px-3 py-1.5 text-xs font-semibold text-stone-700 transition-colors hover:border-stone-400 hover:text-stone-950 sm:inline-flex"
+              aria-label={t("header.langToggleAria")}
             >
-              {t(`nav.${link.key}`)}
+              {language === "ru" ? "RU / UZ" : "UZ / RU"}
+            </button>
+
+            <a
+              href={siteConfig.phoneHref}
+              className="hidden items-center gap-2 rounded-full py-1.5 pl-1.5 pr-3 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 md:inline-flex"
+            >
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent/10 text-accent">
+                <PhoneIcon className="h-3.5 w-3.5" />
+              </span>
+              {siteConfig.phone}
             </a>
-          ))}
-        </nav>
 
-        <div className="flex items-center gap-2 sm:gap-3">
-          <button
-            type="button"
-            onClick={toggle}
-            className="hidden rounded-full border border-stone-200 px-3 py-1.5 text-xs font-semibold text-stone-700 transition-colors hover:border-stone-400 sm:inline-flex"
-            aria-label={t("header.langToggleAria")}
-          >
-            {language === "ru" ? "RU / UZ" : "UZ / RU"}
-          </button>
+            <a
+              href="#lead-form"
+              className="hidden items-center justify-center rounded-full bg-stone-950 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent sm:inline-flex"
+            >
+              {t("header.cta")}
+            </a>
 
-          <a
-            href={siteConfig.phoneHref}
-            className="hidden items-center gap-1.5 text-sm font-semibold text-stone-950 md:inline-flex"
-          >
-            <PhoneIcon className="h-4 w-4 text-accent" />
-            {siteConfig.phone}
-          </a>
-
-          <a
-            href="#lead-form"
-            className="hidden rounded-full bg-accent px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark sm:inline-flex"
-          >
-            {t("header.cta")}
-          </a>
-
-          <button
-            type="button"
-            onClick={() => setMenuOpen(true)}
-            className="inline-flex items-center justify-center rounded-full border border-stone-200 p-2 text-stone-800 lg:hidden"
-            aria-label={t("header.openMenuAria")}
-          >
-            <MenuIcon />
-          </button>
+            <button
+              type="button"
+              onClick={() => setMenuOpen(true)}
+              className="inline-flex items-center justify-center rounded-full border border-stone-200 p-2 text-stone-800 lg:hidden"
+              aria-label={t("header.openMenuAria")}
+            >
+              <MenuIcon />
+            </button>
+          </div>
         </div>
       </Container>
 
@@ -97,7 +104,7 @@ export default function Header() {
         aria-hidden="true"
       />
       <div
-        className={`fixed inset-y-0 right-0 z-70 flex w-[85%] max-w-sm flex-col overflow-y-auto bg-white p-6 shadow-xl transition-transform duration-300 lg:hidden ${
+        className={`fixed inset-y-0 right-0 z-70 flex w-[85%] max-w-sm flex-col overflow-y-auto rounded-l-3xl bg-white p-6 shadow-2xl transition-transform duration-300 lg:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         role="dialog"
@@ -121,7 +128,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="rounded-lg px-3 py-3 text-base font-medium text-stone-800 hover:bg-stone-50"
+              className="rounded-xl px-3.5 py-3 text-base font-medium text-stone-800 transition-colors hover:bg-stone-50 hover:text-accent"
             >
               {t(`nav.${link.key}`)}
             </a>

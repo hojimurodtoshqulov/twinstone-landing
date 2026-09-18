@@ -24,7 +24,7 @@ const ru = {
       "Подберём вид гранита, формат и обработку поверхности под задачу, нагрузку и архитектуру вашего проекта.",
     ctaPrimary: "Получить расчёт",
     ctaSecondary: "Смотреть виды гранита",
-    imageAlt: "Укладка гранитной брусчатки на объекте Twinstone",
+    imageAlt: "Освещённая гранитная пешеходная дорожка, уложенная Twinstone в парковой зоне",
   },
   heroStats: {
     items: [
@@ -34,23 +34,45 @@ const ru = {
     ],
   },
   products: {
-    eyebrow: "Изделия из гранита",
+    eyebrow: "Продукция Twinstone",
     title: "Что вы можете заказать",
     description:
-      "Три основных направления изделий из натурального гранита для фасадов, территорий и элементов благоустройства.",
+      "Вибропрессованные изделия и натуральный камень — для фасадов, покрытий и благоустройства любого объекта.",
     items: {
-      "plity-oblitsovka": {
-        title: "Плиты и облицовка",
-        description: "Для фасадов, цоколей, полов и интерьерных решений",
+      "kamennyy-kovyor": {
+        title: "Каменный ковёр",
+        description: "Насыщенная палитра оттенков, устойчивость к износу и нагрузкам",
       },
-      "bruschatka-moshchenie": {
-        title: "Брусчатка и мощение",
-        description: "Для дорожек, площадей, дворов и парковочных зон",
+      "naturalnyy-granit": {
+        title: "Натуральный гранит",
+        description: "Высокая прочность, широкий ассортимент",
       },
-      "stupeni-bordyury": {
-        title: "Ступени и бордюры",
-        description: "Для входных групп, лестниц и оформления территории",
+      "bruschatka-kvadrat": {
+        title: "Брусчатка «квадрат»",
+        description: "Насыщенная палитра оттенков, устойчивость к износу и нагрузкам",
       },
+      travertin: {
+        title: "Травертин",
+        description: "Уникальный рисунок, прочность и долговечность",
+      },
+    },
+    additionalTitle: "Также в ассортименте",
+    additional: {
+      bordyur: "Бордюр",
+      "taktilnaya-plitka": "Тактильная плитка",
+      lotok: "Лоток",
+    },
+    shapesTitle: "Формы брусчатки",
+    shapes: {
+      kvadrat: "Квадрат",
+      "malyy-kvadrat": "Малый квадрат",
+      pryamougolnik: "Прямоугольник",
+      "bruschatka-klassika": "Брусчатка",
+      "staryy-gorod": "Старый город",
+      megapolis: "Мегаполис",
+      lepestok: "Лепесток",
+      rombus: "Ромб",
+      origami: "Оригами",
     },
   },
   applications: {
@@ -88,7 +110,7 @@ const ru = {
   quality: {
     eyebrow: "Производство и обработка Twinstone",
     title: "Камень проходит проверку до упаковки и отгрузки",
-    imageAlt: "Производственное здание Twinstone",
+    imageAlt: "Брусчатка Twinstone, уложенная во дворе жилого комплекса",
     features: {
       check: {
         title: "Проверка материала",
@@ -135,26 +157,14 @@ const ru = {
     successAgain: "Отправить ещё одну заявку",
   },
   map: {
-    title: "Кейсы Twinstone на карте Узбекистана",
-    mapAria: "Карта областей Узбекистана с отмеченным Ташкентом",
-    tashkentAria: "Смотреть кейсы Twinstone в Ташкенте",
-    tashkentName: "Ташкент",
-    tashkentCases: "3 кейса",
-    caption: "Нажмите на Ташкент, чтобы посмотреть реализованные объекты",
-    regions: {
-      karakalpakstan: "Республика Каракалпакстан",
-      khorezm: "Хорезмская область",
-      navoiy: "Навоийская область",
-      bukhara: "Бухарская область",
-      kashkadarya: "Кашкадарьинская область",
-      surkhandarya: "Сурхандарьинская область",
-      samarkand: "Самаркандская область",
-      jizzakh: "Джизакская область",
-      syrdarya: "Сырдарьинская область",
-      fergana: "Ферганская область",
-      andijan: "Андижанская область",
-      namangan: "Наманганская область",
-    },
+    eyebrow: "Наш адрес",
+    title: "Twinstone на карте",
+    caption: "Приезжайте в шоурум или свяжитесь с нами для расчёта доставки по всему Узбекистану",
+    mapAria: "Карта с расположением Twinstone",
+    addressLabel: "Адрес",
+    phoneLabel: "Телефон",
+    ctaDirections: "Проложить маршрут",
+    ctaCases: "Смотреть реализованные объекты",
   },
   cases: {
     eyebrow: "Проекты",
@@ -178,6 +188,24 @@ const ru = {
         city: "Ташкент",
         category: "Общественное пространство",
         description: "Покрытие для зоны с высокой нагрузкой",
+      },
+      "vhod-v-magazin": {
+        title: "Входная группа торгового помещения",
+        city: "Ташкент",
+        category: "Коммерческое здание",
+        description: "Контрастная брусчатка и гранитные ступени у входа",
+      },
+      "alleya-v-parke": {
+        title: "Пешеходная аллея в парке",
+        city: "Ташкент",
+        category: "Парк",
+        description: "Мощение прогулочной дорожки с гранитным бордюром",
+      },
+      "ploschad-sportkompleksa": {
+        title: "Площадь у спортивного комплекса",
+        city: "Ташкент",
+        category: "Спортивный комплекс",
+        description: "Мощение прилегающей территории и зоны отдыха",
       },
     },
   },
@@ -255,7 +283,7 @@ const uz: typeof ru = {
       "Loyihangizning vazifasi, yuklamasi va arxitekturasiga mos granit turini, formatini va sirt ishlovini tanlab beramiz.",
     ctaPrimary: "Hisob-kitob olish",
     ctaSecondary: "Granit turlarini ko'rish",
-    imageAlt: "Twinstone obyektida granit bruschatka yotqizish jarayoni",
+    imageAlt: "Twinstone tomonidan bog' hududida yotqizilgan yoritilgan granit piyodalar yo'lkasi",
   },
   heroStats: {
     items: [
@@ -265,23 +293,45 @@ const uz: typeof ru = {
     ],
   },
   products: {
-    eyebrow: "Granit buyumlari",
+    eyebrow: "Twinstone mahsulotlari",
     title: "Nimalarni buyurtma qilishingiz mumkin",
     description:
-      "Fasadlar, hududlar va obodonlashtirish elementlari uchun tabiiy granitdan tayyorlangan uchta asosiy yo'nalish.",
+      "Fasadlar, qoplamalar va har qanday obyektni obodonlashtirish uchun vibropress buyumlar va tabiiy tosh.",
     items: {
-      "plity-oblitsovka": {
-        title: "Plitalar va qoplama",
-        description: "Fasadlar, sokllar, pollar va interyer yechimlari uchun",
+      "kamennyy-kovyor": {
+        title: "Tosh gilam",
+        description: "Ranglar palitrasi boy, ishqalanishga va yuklamaga chidamli",
       },
-      "bruschatka-moshchenie": {
-        title: "Bruschatka va mostovoy",
-        description: "Yo'lkalar, maydonlar, hovlilar va avtoturargohlar uchun",
+      "naturalnyy-granit": {
+        title: "Tabiiy granit",
+        description: "Yuqori mustahkamlik, keng assortiment",
       },
-      "stupeni-bordyury": {
-        title: "Zinapoyalar va bordyurlar",
-        description: "Kirish guruhlari, zinapoyalar va hudud bezatilishi uchun",
+      "bruschatka-kvadrat": {
+        title: "Bruschatka «kvadrat»",
+        description: "Ranglar palitrasi boy, ishqalanishga va yuklamaga chidamli",
       },
+      travertin: {
+        title: "Travertin",
+        description: "Noyob naqsh, mustahkamlik va uzoq xizmat muddati",
+      },
+    },
+    additionalTitle: "Assortimentda shuningdek",
+    additional: {
+      bordyur: "Bordyur",
+      "taktilnaya-plitka": "Taktil plitka",
+      lotok: "Lotok",
+    },
+    shapesTitle: "Bruschatka shakllari",
+    shapes: {
+      kvadrat: "Kvadrat",
+      "malyy-kvadrat": "Kichik kvadrat",
+      pryamougolnik: "To'rtburchak",
+      "bruschatka-klassika": "Bruschatka",
+      "staryy-gorod": "Eski shahar",
+      megapolis: "Megapolis",
+      lepestok: "Gulbarg",
+      rombus: "Romb",
+      origami: "Origami",
     },
   },
   applications: {
@@ -319,7 +369,7 @@ const uz: typeof ru = {
   quality: {
     eyebrow: "Twinstone ishlab chiqarish va ishlov berish",
     title: "Tosh qadoqlash va jo'natishdan oldin tekshiruvdan o'tadi",
-    imageAlt: "Twinstone ishlab chiqarish binosi",
+    imageAlt: "Turar-joy majmuasi hovlisiga yotqizilgan Twinstone bruschatkasi",
     features: {
       check: {
         title: "Materialni tekshirish",
@@ -365,26 +415,14 @@ const uz: typeof ru = {
     successAgain: "Yana bitta ariza yuborish",
   },
   map: {
-    title: "Twinstone keyslari O'zbekiston xaritasida",
-    mapAria: "Toshkent belgilangan O'zbekiston viloyatlari xaritasi",
-    tashkentAria: "Toshkentdagi Twinstone keyslarini ko'rish",
-    tashkentName: "Toshkent",
-    tashkentCases: "3 ta keys",
-    caption: "Amalga oshirilgan obyektlarni ko'rish uchun Toshkentni bosing",
-    regions: {
-      karakalpakstan: "Qoraqalpog'iston Respublikasi",
-      khorezm: "Xorazm viloyati",
-      navoiy: "Navoiy viloyati",
-      bukhara: "Buxoro viloyati",
-      kashkadarya: "Qashqadaryo viloyati",
-      surkhandarya: "Surxondaryo viloyati",
-      samarkand: "Samarqand viloyati",
-      jizzakh: "Jizzax viloyati",
-      syrdarya: "Sirdaryo viloyati",
-      fergana: "Farg'ona viloyati",
-      andijan: "Andijon viloyati",
-      namangan: "Namangan viloyati",
-    },
+    eyebrow: "Bizning manzil",
+    title: "Twinstone xaritada",
+    caption: "Shouruмga tashrif buyuring yoki O'zbekiston bo'ylab yetkazib berishni hisoblash uchun bog'laning",
+    mapAria: "Twinstone joylashuvi ko'rsatilgan xarita",
+    addressLabel: "Manzil",
+    phoneLabel: "Telefon",
+    ctaDirections: "Yo'nalishni ko'rsatish",
+    ctaCases: "Amalga oshirilgan obyektlarni ko'rish",
   },
   cases: {
     eyebrow: "Loyihalar",
@@ -408,6 +446,24 @@ const uz: typeof ru = {
         city: "Toshkent",
         category: "Jamoat maydoni",
         description: "Yuqori yuklamali zona uchun qoplama",
+      },
+      "vhod-v-magazin": {
+        title: "Savdo maydonining kirish guruhi",
+        city: "Toshkent",
+        category: "Tijorat binosi",
+        description: "Kirish qismida kontrastli bruschatka va granit zinapoyalar",
+      },
+      "alleya-v-parke": {
+        title: "Parkdagi piyodalar allasi",
+        city: "Toshkent",
+        category: "Park",
+        description: "Granit bordyurli sayr yo'lkasini mostovoy qilish",
+      },
+      "ploschad-sportkompleksa": {
+        title: "Sport kompleksi oldidagi maydon",
+        city: "Toshkent",
+        category: "Sport kompleksi",
+        description: "Atrofdagi hudud va dam olish zonasini mostovoy qilish",
       },
     },
   },

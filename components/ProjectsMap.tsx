@@ -3,85 +3,75 @@
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { MapPinIcon, PhoneIcon } from "@/components/ui/Icons";
+import { siteConfig } from "@/data/nav";
 
-const regionKeys = [
-  { key: "karakalpakstan", x: 40, y: 40, w: 220, h: 180 },
-  { key: "khorezm", x: 40, y: 230, w: 120, h: 70 },
-  { key: "navoiy", x: 180, y: 150, w: 240, h: 170 },
-  { key: "bukhara", x: 170, y: 330, w: 160, h: 90 },
-  { key: "kashkadarya", x: 340, y: 350, w: 140, h: 110 },
-  { key: "surkhandarya", x: 460, y: 400, w: 100, h: 90 },
-  { key: "samarkand", x: 350, y: 250, w: 130, h: 95 },
-  { key: "jizzakh", x: 430, y: 190, w: 130, h: 90 },
-  { key: "syrdarya", x: 560, y: 210, w: 60, h: 60 },
-  { key: "fergana", x: 700, y: 220, w: 80, h: 80 },
-  { key: "andijan", x: 770, y: 200, w: 90, h: 80 },
-  { key: "namangan", x: 700, y: 130, w: 120, h: 80 },
-] as const;
-
-const tashkent = { x: 590, y: 120, w: 110, h: 100 };
+const MAP_EMBED_SRC =
+  "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3417524.082119582!2d65.0398069981926!3d40.872643335923286!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDM0JzIxLjkiTiA2NcKwMzknMzkuMiJF!5e0!3m2!1sru!2s!4v1789716980805!5m2!1sru!2s";
 
 export default function ProjectsMap() {
   const { t } = useTranslation();
+  const address = t("footer.address");
+  const directionsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
   return (
-    <section className="py-16 sm:py-24 lg:py-28">
+    <section id="location" className="py-16 sm:py-24 lg:py-28">
       <Container>
-        <SectionHeading align="center" title={t("map.title")} />
+        <SectionHeading align="center" eyebrow={t("map.eyebrow")} title={t("map.title")} description={t("map.caption")} />
 
-        <div className="mx-auto mt-12 max-w-4xl overflow-x-auto">
-          <svg
-            viewBox="0 0 900 520"
-            role="img"
-            aria-label={t("map.mapAria")}
-            className="w-full min-w-[560px]"
-          >
-            {regionKeys.map((region) => (
-              <rect
-                key={region.key}
-                x={region.x}
-                y={region.y}
-                width={region.w}
-                height={region.h}
-                rx={16}
-                className="fill-stone-100 stroke-stone-200 transition-colors hover:fill-stone-200"
-                strokeWidth={2}
-              >
-                <title>{t(`map.regions.${region.key}`)}</title>
-              </rect>
-            ))}
+        <div className="mx-auto mt-12 overflow-hidden rounded-3xl border border-stone-200 shadow-sm sm:mt-14 lg:grid lg:grid-cols-[1.3fr_1fr]">
+          <div className="relative h-95 sm:h-120 lg:h-150">
+            <iframe
+              src={MAP_EMBED_SRC}
+              title={t("map.mapAria")}
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="absolute inset-0 h-full w-full grayscale-[20%]"
+              style={{ border: 0 }}
+            />
+          </div>
 
-            <a href="#cases" aria-label={t("map.tashkentAria")}>
-              <rect
-                x={tashkent.x}
-                y={tashkent.y}
-                width={tashkent.w}
-                height={tashkent.h}
-                rx={16}
-                className="fill-accent stroke-accent-dark transition-opacity hover:opacity-90"
-                strokeWidth={2}
-              />
-              <text
-                x={tashkent.x + tashkent.w / 2}
-                y={tashkent.y + tashkent.h / 2 - 6}
-                textAnchor="middle"
-                className="fill-white text-[15px] font-semibold"
+          <div className="flex flex-col justify-center gap-6 bg-stone-950 p-8 text-white sm:p-10">
+            <div className="flex items-start gap-3">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-accent">
+                <MapPinIcon className="h-5 w-5" />
+              </span>
+              <div>
+                <h3 className="text-sm font-semibold text-white">{t("map.addressLabel")}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-white/70">{address}</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-accent">
+                <PhoneIcon className="h-4 w-4" />
+              </span>
+              <div>
+                <h3 className="text-sm font-semibold text-white">{t("map.phoneLabel")}</h3>
+                <a href={siteConfig.phoneHref} className="mt-1 block text-sm text-white/70 transition-colors hover:text-white">
+                  {siteConfig.phone}
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-2 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={directionsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
               >
-                {t("map.tashkentName")}
-              </text>
-              <text
-                x={tashkent.x + tashkent.w / 2}
-                y={tashkent.y + tashkent.h / 2 + 16}
-                textAnchor="middle"
-                className="fill-white/85 text-[12px] font-medium"
+                {t("map.ctaDirections")}
+              </a>
+              <a
+                href="#cases"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
               >
-                {t("map.tashkentCases")}
-              </text>
-            </a>
-          </svg>
+                {t("map.ctaCases")}
+              </a>
+            </div>
+          </div>
         </div>
-
-        <p className="mt-6 text-center text-sm text-stone-500">{t("map.caption")}</p>
       </Container>
     </section>
   );

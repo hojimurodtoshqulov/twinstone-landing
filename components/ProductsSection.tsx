@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { products } from "@/data/products";
+import Chip from "@/components/ui/Chip";
+import { additionalProducts, pavingShapes, products } from "@/data/products";
 
 export default function ProductsSection() {
   const { t } = useTranslation();
@@ -18,7 +19,7 @@ export default function ProductsSection() {
           description={t("products.description")}
         />
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-14 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
             <article
               key={product.slug}
@@ -30,7 +31,7 @@ export default function ProductsSection() {
                   alt={t(`products.items.${product.slug}.title`)}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(min-width: 768px) 33vw, 100vw"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                 />
               </div>
               <div className="p-6">
@@ -43,6 +44,25 @@ export default function ProductsSection() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-10 flex flex-col gap-6 sm:mt-12 sm:flex-row sm:gap-10">
+          <div>
+            <h3 className="text-sm font-semibold text-stone-950">{t("products.additionalTitle")}</h3>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {additionalProducts.map((slug) => (
+                <Chip key={slug}>{t(`products.additional.${slug}`)}</Chip>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-stone-950">{t("products.shapesTitle")}</h3>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {pavingShapes.map((slug) => (
+                <Chip key={slug}>{t(`products.shapes.${slug}`)}</Chip>
+              ))}
+            </div>
+          </div>
         </div>
       </Container>
     </section>

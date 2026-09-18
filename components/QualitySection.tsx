@@ -19,7 +19,7 @@ export default function QualitySection() {
   return (
     <section id="quality" className="bg-stone-950 py-16 text-white sm:py-24 lg:py-28">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <div>
             <SectionHeading eyebrow={t("quality.eyebrow")} title={t("quality.title")} onDark />
 
@@ -45,13 +45,13 @@ export default function QualitySection() {
             </div>
           </div>
 
-          <div className="relative aspect-video overflow-hidden rounded-2xl">
+          <div className="relative aspect-square overflow-hidden rounded-2xl">
             <Image
-              src="/images/production.webp"
+              src="/images/11.jpg"
               alt={t("quality.imageAlt")}
               fill
               className="object-cover"
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              sizes="(min-width: 1024px) 55vw, 100vw"
             />
           </div>
         </div>
