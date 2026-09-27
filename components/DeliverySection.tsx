@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { CheckIcon } from "@/components/ui/Icons";
+import { siteImages } from "@/data/images";
 
 export default function DeliverySection() {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ export default function DeliverySection() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-4/3 overflow-hidden rounded-2xl lg:order-2">
             <Image
-              src="/images/dostavka-bruschatka.jpg"
+              src={siteImages.delivery}
               alt={t("delivery.imageAlt")}
               fill
               className="object-cover"

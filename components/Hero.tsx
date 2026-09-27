@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/Container";
 import { ArrowRightIcon } from "@/components/ui/Icons";
+import { siteImages } from "@/data/images";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -64,7 +65,7 @@ export default function Hero() {
           <div className="relative">
             <div className="relative aspect-4/3 overflow-hidden rounded-[1.75rem] shadow-2xl shadow-black/50 ring-1 ring-white/10 sm:aspect-16/11 lg:aspect-auto lg:h-[560px] xl:h-[600px]">
               <Image
-                src="/images/project-park-walkway.jpg"
+                src={siteImages.hero}
                 alt={t("hero.imageAlt")}
                 fill
                 priority

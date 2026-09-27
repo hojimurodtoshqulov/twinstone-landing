@@ -13,6 +13,8 @@ export interface GraniteType {
 export interface ProductItem {
   slug: string;
   image: string;
+  /** CSS object-position for cropping tall photos into the card, e.g. "50% 80%". */
+  position?: string;
 }
 
 export interface ApplicationItem {

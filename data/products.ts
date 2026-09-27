@@ -1,24 +1,33 @@
 import type { ProductItem } from "./types";
 
 export const products: ProductItem[] = [
-  { slug: "kamennyy-kovyor", image: "/images/products/stone-carpet.webp" },
-  { slug: "naturalnyy-granit", image: "/images/products/natural-granite.webp" },
-  { slug: "bruschatka-kvadrat", image: "/images/products/paving-square.webp" },
-  { slug: "travertin", image: "/images/products/travertine.webp" },
+  { slug: "granitnye-plity", image: "/images/products/natural-granite.webp" },
+  { slug: "granitnaya-bruschatka", image: "/images/granit/optimized/dsc5626.webp" },
+  {
+    slug: "granitnye-stupeni",
+    image: "/images/granit/optimized/for-showcase.webp",
+    position: "50% 80%",
+  },
+  { slug: "kolotyy-granit", image: "/images/granit/optimized/for.webp", position: "50% 43%" },
 ];
 
-/** Extra items from the Twinstone catalog shown as a compact list below the main product cards. */
-export const additionalProducts = ["bordyur", "taktilnaya-plitka", "lotok"] as const;
+/** Extra granite items made to order, shown as a compact list below the main product cards. */
+export const additionalProducts = [
+  "bordyur",
+  "podokonniki",
+  "stoleshnitsy",
+  "plintusy",
+  "parapety",
+  "maf",
+  "pamyatniki",
+] as const;
 
-/** Paving ("bruschatka") shape variations available in the catalog. */
-export const pavingShapes = [
-  "kvadrat",
-  "malyy-kvadrat",
-  "pryamougolnik",
-  "bruschatka-klassika",
-  "staryy-gorod",
-  "megapolis",
-  "lepestok",
-  "rombus",
-  "origami",
+/** Surface finishes available for granite products. */
+export const surfaceFinishes = [
+  "polirovannaya",
+  "termo",
+  "pilenaya",
+  "buchardirovannaya",
+  "kolotaya",
+  "loschenaya",
 ] as const;

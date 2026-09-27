@@ -4,7 +4,7 @@
 
 const ru = {
   nav: {
-    products: "Продукция",
+    products: "Изделия",
     applications: "Применение",
     catalog: "Виды гранита",
     quality: "Качество",
@@ -18,7 +18,7 @@ const ru = {
     cta: "Получить расчёт",
   },
   hero: {
-    eyebrow: "Натуральный камень для частных и коммерческих объектов",
+    eyebrow: "Изделия из натурального гранита",
     title: "Натуральный гранит для фасадов, мощения и благоустройства",
     subtitle:
       "Подберём вид гранита, формат и обработку поверхности под задачу, нагрузку и архитектуру вашего проекта.",
@@ -28,51 +28,52 @@ const ru = {
   },
   heroStats: {
     items: [
-      { number: "01", text: "Натуральный гранит из каталога" },
-      { number: "02", text: "Полировка, термообработка и колотая фактура" },
-      { number: "03", text: "Размеры под частные и крупные объекты" },
+      { number: "01", text: "Только натуральный гранит местных месторождений" },
+      { number: "02", text: "Полировка, термообработка, бучардирование и колотая фактура" },
+      { number: "03", text: "Распиловка под размеры частных и крупных объектов" },
     ],
   },
   products: {
-    eyebrow: "Продукция Twinstone",
-    title: "Что вы можете заказать",
+    eyebrow: "Изделия Twinstone",
+    title: "Что мы изготавливаем из гранита",
     description:
-      "Вибропрессованные изделия и натуральный камень — для фасадов, покрытий и благоустройства любого объекта.",
+      "Плиты, брусчатка, ступени и бордюры из натурального гранита — распиловка и обработка под размеры и задачи вашего объекта.",
     items: {
-      "kamennyy-kovyor": {
-        title: "Каменный ковёр",
-        description: "Насыщенная палитра оттенков, устойчивость к износу и нагрузкам",
+      "granitnye-plity": {
+        title: "Гранитные плиты",
+        description: "Облицовка фасадов, цоколей и полов. Толщина 18 и 30 мм",
       },
-      "naturalnyy-granit": {
-        title: "Натуральный гранит",
-        description: "Высокая прочность, широкий ассортимент",
+      "granitnaya-bruschatka": {
+        title: "Гранитная брусчатка",
+        description: "Квадратная и шестигранная — для площадей и дорожек с высокой нагрузкой",
       },
-      "bruschatka-kvadrat": {
-        title: "Брусчатка «квадрат»",
-        description: "Насыщенная палитра оттенков, устойчивость к износу и нагрузкам",
+      "granitnye-stupeni": {
+        title: "Ступени и подступенки",
+        description: "Входные группы и лестницы с противоскользящей обработкой",
       },
-      travertin: {
-        title: "Травертин",
-        description: "Уникальный рисунок, прочность и долговечность",
+      "kolotyy-granit": {
+        title: "Колотый гранит",
+        description: "Рельефная фактура для облицовки цоколей, стен и заборов",
       },
     },
-    additionalTitle: "Также в ассортименте",
+    additionalTitle: "Также изготавливаем",
     additional: {
-      bordyur: "Бордюр",
-      "taktilnaya-plitka": "Тактильная плитка",
-      lotok: "Лоток",
+      bordyur: "Гранитный бордюр",
+      podokonniki: "Подоконники",
+      stoleshnitsy: "Столешницы",
+      plintusy: "Плинтусы",
+      parapety: "Парапеты и отливы",
+      maf: "Малые архитектурные формы",
+      pamyatniki: "Памятники",
     },
-    shapesTitle: "Формы брусчатки",
-    shapes: {
-      kvadrat: "Квадрат",
-      "malyy-kvadrat": "Малый квадрат",
-      pryamougolnik: "Прямоугольник",
-      "bruschatka-klassika": "Брусчатка",
-      "staryy-gorod": "Старый город",
-      megapolis: "Мегаполис",
-      lepestok: "Лепесток",
-      rombus: "Ромб",
-      origami: "Оригами",
+    finishesTitle: "Обработка поверхности",
+    finishes: {
+      polirovannaya: "Полированная",
+      termo: "Термообработанная",
+      pilenaya: "Пиленая",
+      buchardirovannaya: "Бучардированная",
+      kolotaya: "Колотая",
+      loschenaya: "Лощёная",
     },
   },
   applications: {
@@ -94,35 +95,35 @@ const ru = {
       "Стартовая цена каталога показана сразу. Формат, толщина и обработка поверхности меняют итоговую стоимость.",
     priceFrom: "от {{price}}",
     priceCaption: "стартовая позиция",
-    sampleAlt: "Образец материала: {{name}}",
+    sampleAlt: "Образец гранита: {{name}}",
     customFormat: "Раскрой под проект",
     unit: "мм",
     treatment: "Полировка или термообработка",
     items: {
-      "kuksaroy-rozovyy": { name: "Куксарой розовый", description: "Тёплый розово-серый рисунок" },
-      "kuksaroy-seryy": { name: "Куксарой серый", description: "Ровный нейтральный серый тон" },
-      avrora: { name: "Аврора", description: "Бордово-красный рисунок" },
-      nero: { name: "Неро", description: "Глубокий чёрный тон" },
-      suvlik: { name: "Сувлик", description: "Серо-чёрный мелкозернистый" },
+      nero: { name: "Неро", description: "Тёмный графитовый тон с мелким светлым зерном" },
+      olivkovyy: { name: "Оливковый", description: "Тёмно-оливковый с крупными овальными вкраплениями" },
+      "kuksaroy-seryy": { name: "Куксарой серый", description: "Светло-серый мелкозернистый рисунок" },
+      bezhevyy: { name: "Бежевый", description: "Тёплый песочный тон с тёмным зерном" },
+      suvlik: { name: "Сувлик", description: "Серый с чёрно-белым зерном" },
       kushrabot: { name: "Кушработ", description: "Красно-коричневый рисунок" },
     },
   },
   quality: {
     eyebrow: "Производство и обработка Twinstone",
-    title: "Камень проходит проверку до упаковки и отгрузки",
-    imageAlt: "Брусчатка Twinstone, уложенная во дворе жилого комплекса",
+    title: "Каждая гранитная плита проходит проверку до отгрузки",
+    imageAlt: "Гранитные плиты Twinstone с точной геометрией и обработанной поверхностью",
     features: {
       check: {
-        title: "Проверка материала",
-        description: "Контролируем целостность и соответствие выбранному виду камня",
+        title: "Отбор гранита",
+        description: "Проверяем целостность, рисунок и однородность оттенка каждой партии",
       },
       ruler: {
-        title: "Точная геометрия",
-        description: "Режем и калибруем изделия под согласованный формат",
+        title: "Точная распиловка",
+        description: "Режем и калибруем гранит под согласованный формат и толщину",
       },
       layers: {
-        title: "Выбор поверхности",
-        description: "Полированная, термообработанная или колотая фактура",
+        title: "Обработка поверхности",
+        description: "Полировка, термообработка, бучардирование или колотая фактура",
       },
     },
   },
@@ -131,9 +132,9 @@ const ru = {
     title: "Путь заказа от заявки до приёмки",
     steps: [
       { title: "Заявка", description: "Получаем задачу и контакты" },
-      { title: "Подбор", description: "Уточняем объект, нагрузку и вид камня" },
+      { title: "Подбор", description: "Уточняем объект, нагрузку и вид гранита" },
       { title: "Расчёт", description: "Согласуем формат, обработку и объём" },
-      { title: "Подготовка", description: "Режем и обрабатываем изделия" },
+      { title: "Производство", description: "Распиливаем и обрабатываем гранит" },
       { title: "Отгрузка", description: "Упаковываем заказ для перевозки" },
       { title: "Приёмка", description: "Передаём изделия и документы" },
     ],
@@ -142,7 +143,7 @@ const ru = {
     eyebrow: "Заявка",
     title: "Получите подбор гранита и стоимости",
     description:
-      "Оставьте телефон — специалист уточнит задачу, предложит варианты камня и подготовит расчёт.",
+      "Оставьте телефон — специалист уточнит задачу, предложит подходящие виды гранита и подготовит расчёт.",
     objectTypeLegend: "Тип объекта",
     objectTypes: ["Частный объект", "Коммерческий объект"],
     areaLegend: "Площадь объекта",
@@ -159,9 +160,10 @@ const ru = {
   map: {
     eyebrow: "Наш адрес",
     title: "Twinstone на карте",
-    caption: "Приезжайте в шоурум или свяжитесь с нами для расчёта доставки по всему Узбекистану",
+    caption:
+      "Приезжайте посмотреть образцы гранита вживую или свяжитесь с нами для расчёта доставки по всему Узбекистану",
     mapAria: "Карта с расположением Twinstone",
-    fabricAlt: "Производственная площадка Twinstone",
+    fabricAlt: "Производство гранитных изделий Twinstone",
     addressLabel: "Адрес",
     phoneLabel: "Телефон",
     ctaDirections: "Проложить маршрут",
@@ -169,53 +171,53 @@ const ru = {
   },
   cases: {
     eyebrow: "Проекты",
-    title: "Реализованные объекты",
+    title: "Объекты из нашего гранита",
     backLink: "← Все проекты",
     items: {
       "moshchenie-zhk": {
-        title: "Мощение территории жилого комплекса",
+        title: "Гранитное мощение территории жилого комплекса",
         city: "Ташкент",
         category: "Жилой комплекс",
-        description: "Мощение пешеходной территории",
+        description: "Гранитная брусчатка и бордюры для пешеходной зоны",
       },
       "vhodnaya-gruppa-kontrast": {
-        title: "Входная группа с контрастным мощением",
+        title: "Входная группа из гранита двух оттенков",
         city: "Ташкент",
         category: "Входная группа",
-        description: "Контрастная раскладка натурального камня",
+        description: "Контрастная раскладка светлого и тёмного гранита",
       },
       "obshchestvennoe-prostranstvo": {
-        title: "Общественное пространство с мощением",
+        title: "Общественное пространство из гранита",
         city: "Ташкент",
         category: "Общественное пространство",
-        description: "Покрытие для зоны с высокой нагрузкой",
+        description: "Термообработанные гранитные плиты для зоны с высокой нагрузкой",
       },
       "vhod-v-magazin": {
         title: "Входная группа торгового помещения",
         city: "Ташкент",
         category: "Коммерческое здание",
-        description: "Контрастная брусчатка и гранитные ступени у входа",
+        description: "Облицовка цоколя и гранитные ступени с противоскользящей обработкой",
       },
       "alleya-v-parke": {
-        title: "Пешеходная аллея в парке",
+        title: "Гранитная аллея в парке",
         city: "Ташкент",
         category: "Парк",
-        description: "Мощение прогулочной дорожки с гранитным бордюром",
+        description: "Гранитная брусчатка и бордюр прогулочной дорожки",
       },
       "ploschad-sportkompleksa": {
-        title: "Площадь у спортивного комплекса",
+        title: "Гранитная площадь у спортивного комплекса",
         city: "Ташкент",
         category: "Спортивный комплекс",
-        description: "Мощение прилегающей территории и зоны отдыха",
+        description: "Гранитные плиты на прилегающей территории и в зоне отдыха",
       },
     },
   },
   delivery: {
     eyebrow: "Доставка",
     title: "Согласуем удобный способ получения заказа",
-    imageAlt: "Погрузка поддонов с продукцией краном-манипулятором для отгрузки",
-    checklist: ["Надёжная упаковка изделий", "Документы на продукцию", "Согласованная дата отгрузки"],
-    note: "Доступен самовывоз. Возможность и стоимость доставки рассчитываются отдельно с учётом объёма, упаковки и адреса объекта.",
+    imageAlt: "Погрузка гранитных изделий на поддонах для отгрузки",
+    checklist: ["Гранит на поддонах в надёжной обвязке", "Документы на камень", "Согласованная дата отгрузки"],
+    note: "Доступен самовывоз. Возможность и стоимость доставки рассчитываются отдельно с учётом объёма, веса партии и адреса объекта.",
   },
   partners: {
     title: "Нам доверяют проекты",
@@ -225,24 +227,34 @@ const ru = {
     title: "Частые вопросы",
     items: [
       {
-        question: "Какую обработку выбрать для улицы?",
+        question: "Какую обработку гранита выбрать для улицы?",
         answer:
-          "Для ступеней и мощения обычно используют термообработанную или колотую поверхность: она выраженная и лучше подходит для наружных зон. Финальный вариант подбирается под нагрузку и архитектуру объекта.",
+          "Для ступеней и мощения используют термообработанную, бучардированную или колотую поверхность: она шероховатая и не скользит зимой и после дождя. Полированный гранит лучше подходит для фасадов и интерьеров.",
+      },
+      {
+        question: "Чем гранит лучше бетонной плитки?",
+        answer:
+          "Натуральный гранит прочнее, не выцветает, выдерживает сотни циклов замораживания и оттаивания и служит десятилетиями без замены. Поэтому его выбирают для входных групп, площадей и фасадов с высокой нагрузкой.",
       },
       {
         question: "Какие размеры доступны?",
         answer:
-          "Для основных местных видов гранита доступны плиты толщиной 18 и 30 мм и несколько форматов. Нужный размер и возможность изготовления нестандартных элементов уточняются при расчёте.",
+          "Для основных видов гранита доступны плиты толщиной 18 и 30 мм в форматах от 200×400 до 600×1500 мм. Нестандартные размеры, ступени, бордюры и другие элементы режем под проект.",
       },
       {
-        question: "Можно заказать только материал без монтажа?",
+        question: "Можно ли посмотреть образцы гранита?",
         answer:
-          "Да. Лендинг рассчитан на подбор, подготовку и отгрузку изделий. Состав работ и дополнительные услуги согласовываются отдельно.",
+          "Да. Приезжайте к нам на производство — покажем образцы всех видов гранита с разной обработкой поверхности. Оттенок натурального камня лучше выбирать вживую.",
+      },
+      {
+        question: "Можно заказать только гранит без монтажа?",
+        answer:
+          "Да. Мы изготавливаем и отгружаем гранитные изделия. Монтаж и дополнительные услуги согласовываются отдельно.",
       },
       {
         question: "Как рассчитывается стоимость?",
         answer:
-          "Цена зависит от вида камня, толщины, формата, обработки поверхности, объёма и условий получения заказа. После короткого брифа специалист подготовит индивидуальный расчёт.",
+          "Цена зависит от вида гранита, толщины, формата, обработки поверхности, объёма и условий получения заказа. После короткого брифа специалист подготовит индивидуальный расчёт.",
       },
       {
         question: "Есть ли доставка?",
@@ -256,7 +268,7 @@ const ru = {
     button: "Оставить заявку",
   },
   footer: {
-    tagline: "Натуральный гранит для фасадов, мощения, ступеней и благоустройства в Узбекистане.",
+    tagline: "Изделия из натурального гранита для фасадов, мощения, ступеней и благоустройства в Узбекистане.",
     address: "Буюк Ипак Йули, 434, малая промзона «Мирзо Улугбек», Ташкент",
     copyright: "© 2026 Twinstone. Все права защищены.",
   },
@@ -264,7 +276,7 @@ const ru = {
 
 const uz: typeof ru = {
   nav: {
-    products: "Mahsulotlar",
+    products: "Buyumlar",
     applications: "Qo'llanilishi",
     catalog: "Granit turlari",
     quality: "Sifat",
@@ -278,8 +290,8 @@ const uz: typeof ru = {
     cta: "Hisob-kitob olish",
   },
   hero: {
-    eyebrow: "Xususiy va tijorat obyektlari uchun tabiiy tosh",
-    title: "Fasadlar, mostovoy va obodonlashtirish uchun tabiiy granit",
+    eyebrow: "Tabiiy granitdan buyumlar",
+    title: "Fasadlar, yo'lkalar va obodonlashtirish uchun tabiiy granit",
     subtitle:
       "Loyihangizning vazifasi, yuklamasi va arxitekturasiga mos granit turini, formatini va sirt ishlovini tanlab beramiz.",
     ctaPrimary: "Hisob-kitob olish",
@@ -288,51 +300,52 @@ const uz: typeof ru = {
   },
   heroStats: {
     items: [
-      { number: "01", text: "Katalogdagi tabiiy granit" },
-      { number: "02", text: "Pardozlash, termoishlov va yorilgan faktura" },
-      { number: "03", text: "Xususiy va yirik obyektlar uchun o'lchamlar" },
+      { number: "01", text: "Faqat mahalliy konlardan tabiiy granit" },
+      { number: "02", text: "Pardozlash, termoishlov, bucharda va yorilgan faktura" },
+      { number: "03", text: "Xususiy va yirik obyektlar o'lchamiga kesish" },
     ],
   },
   products: {
-    eyebrow: "Twinstone mahsulotlari",
-    title: "Nimalarni buyurtma qilishingiz mumkin",
+    eyebrow: "Twinstone buyumlari",
+    title: "Granitdan nimalar tayyorlaymiz",
     description:
-      "Fasadlar, qoplamalar va har qanday obyektni obodonlashtirish uchun vibropress buyumlar va tabiiy tosh.",
+      "Tabiiy granitdan plitalar, bruschatka, zinapoyalar va bordyurlar — obyektingiz o'lchami va vazifasiga mos kesish va ishlov berish.",
     items: {
-      "kamennyy-kovyor": {
-        title: "Tosh gilam",
-        description: "Ranglar palitrasi boy, ishqalanishga va yuklamaga chidamli",
+      "granitnye-plity": {
+        title: "Granit plitalar",
+        description: "Fasad, sokl va pollarni qoplash uchun. Qalinligi 18 va 30 mm",
       },
-      "naturalnyy-granit": {
-        title: "Tabiiy granit",
-        description: "Yuqori mustahkamlik, keng assortiment",
+      "granitnaya-bruschatka": {
+        title: "Granit bruschatka",
+        description: "Kvadrat va olti burchakli — yuqori yuklamali maydon va yo'lkalar uchun",
       },
-      "bruschatka-kvadrat": {
-        title: "Bruschatka «kvadrat»",
-        description: "Ranglar palitrasi boy, ishqalanishga va yuklamaga chidamli",
+      "granitnye-stupeni": {
+        title: "Zinapoya va pog'onalar",
+        description: "Sirpanishga qarshi ishlov berilgan kirish guruhlari va zinalar",
       },
-      travertin: {
-        title: "Travertin",
-        description: "Noyob naqsh, mustahkamlik va uzoq xizmat muddati",
+      "kolotyy-granit": {
+        title: "Yorilgan granit",
+        description: "Sokl, devor va to'siqlarni qoplash uchun bo'rtma faktura",
       },
     },
-    additionalTitle: "Assortimentda shuningdek",
+    additionalTitle: "Shuningdek tayyorlaymiz",
     additional: {
-      bordyur: "Bordyur",
-      "taktilnaya-plitka": "Taktil plitka",
-      lotok: "Lotok",
+      bordyur: "Granit bordyur",
+      podokonniki: "Deraza tokchalari",
+      stoleshnitsy: "Stol ustlari",
+      plintusy: "Plintuslar",
+      parapety: "Parapet va otlivlar",
+      maf: "Kichik arxitektura shakllari",
+      pamyatniki: "Yodgorliklar",
     },
-    shapesTitle: "Bruschatka shakllari",
-    shapes: {
-      kvadrat: "Kvadrat",
-      "malyy-kvadrat": "Kichik kvadrat",
-      pryamougolnik: "To'rtburchak",
-      "bruschatka-klassika": "Bruschatka",
-      "staryy-gorod": "Eski shahar",
-      megapolis: "Megapolis",
-      lepestok: "Gulbarg",
-      rombus: "Romb",
-      origami: "Origami",
+    finishesTitle: "Sirt ishlovi",
+    finishes: {
+      polirovannaya: "Pardozlangan",
+      termo: "Termoishlov berilgan",
+      pilenaya: "Arralangan",
+      buchardirovannaya: "Bucharda",
+      kolotaya: "Yorilgan",
+      loschenaya: "Silliqlangan",
     },
   },
   applications: {
@@ -354,35 +367,35 @@ const uz: typeof ru = {
       "Katalogning boshlang'ich narxi darhol ko'rsatilgan. Format, qalinlik va sirt ishlovi yakuniy narxni o'zgartiradi.",
     priceFrom: "{{price}} dan boshlab",
     priceCaption: "boshlang'ich narx",
-    sampleAlt: "Material namunasi: {{name}}",
+    sampleAlt: "Granit namunasi: {{name}}",
     customFormat: "Loyiha bo'yicha kesim",
     unit: "mm",
     treatment: "Pardozlash yoki termoishlov",
     items: {
-      "kuksaroy-rozovyy": { name: "Kuksaroy pushti", description: "Iliq pushti-kulrang rangi" },
-      "kuksaroy-seryy": { name: "Kuksaroy kulrang", description: "Bir tekis neytral kulrang tus" },
-      avrora: { name: "Avrora", description: "To'q qizil-bordo rangi" },
-      nero: { name: "Nero", description: "Chuqur qora tus" },
-      suvlik: { name: "Suvlik", description: "Kulrang-qora mayda donador" },
-      kushrabot: { name: "Qushrabot", description: "Qizil-jigarrang rangi" },
+      nero: { name: "Nero", description: "Mayda och donali to'q grafit tus" },
+      olivkovyy: { name: "Zaytunrang", description: "Yirik oval dog'li to'q zaytun rang" },
+      "kuksaroy-seryy": { name: "Kuksaroy kulrang", description: "Och kulrang mayda donador naqsh" },
+      bezhevyy: { name: "Bej", description: "To'q donali iliq qum rang" },
+      suvlik: { name: "Suvlik", description: "Qora-oq donali kulrang" },
+      kushrabot: { name: "Qushrabot", description: "Qizil-jigarrang naqsh" },
     },
   },
   quality: {
     eyebrow: "Twinstone ishlab chiqarish va ishlov berish",
-    title: "Tosh qadoqlash va jo'natishdan oldin tekshiruvdan o'tadi",
-    imageAlt: "Turar-joy majmuasi hovlisiga yotqizilgan Twinstone bruschatkasi",
+    title: "Har bir granit plita jo'natishdan oldin tekshiruvdan o'tadi",
+    imageAlt: "Aniq kesilgan va sirtiga ishlov berilgan Twinstone granit plitalari",
     features: {
       check: {
-        title: "Materialni tekshirish",
-        description: "Tanlangan tosh turiga mosligi va yaxlitligini nazorat qilamiz",
+        title: "Granitni saralash",
+        description: "Har bir partiyaning yaxlitligi, naqshi va rang bir xilligini tekshiramiz",
       },
       ruler: {
-        title: "Aniq geometriya",
-        description: "Buyumlarni kelishilgan formatga mos kesamiz va kalibrlaymiz",
+        title: "Aniq kesish",
+        description: "Granitni kelishilgan format va qalinlikka mos kesamiz va kalibrlaymiz",
       },
       layers: {
-        title: "Sirt tanlovi",
-        description: "Pardozlangan, termoishlov ko'rgan yoki yorilgan faktura",
+        title: "Sirt ishlovi",
+        description: "Pardozlash, termoishlov, bucharda yoki yorilgan faktura",
       },
     },
   },
@@ -391,9 +404,9 @@ const uz: typeof ru = {
     title: "Buyurtmaning arizadan qabul qilishgacha bo'lgan yo'li",
     steps: [
       { title: "Ariza", description: "Vazifa va aloqa ma'lumotlarini qabul qilamiz" },
-      { title: "Tanlov", description: "Obyekt, yuklama va tosh turini aniqlaymiz" },
+      { title: "Tanlov", description: "Obyekt, yuklama va granit turini aniqlaymiz" },
       { title: "Hisob-kitob", description: "Format, ishlov va hajmni kelishamiz" },
-      { title: "Tayyorlash", description: "Buyumlarni kesamiz va ishlov beramiz" },
+      { title: "Ishlab chiqarish", description: "Granitni kesamiz va ishlov beramiz" },
       { title: "Jo'natish", description: "Buyurtmani tashish uchun qadoqlaymiz" },
       { title: "Qabul qilish", description: "Buyumlar va hujjatlarni topshiramiz" },
     ],
@@ -402,7 +415,7 @@ const uz: typeof ru = {
     eyebrow: "Ariza",
     title: "Granit tanlovi va narxini oling",
     description:
-      "Telefon raqamingizni qoldiring — mutaxassis vazifani aniqlaydi, tosh variantlarini taklif qiladi va hisob-kitob tayyorlaydi.",
+      "Telefon raqamingizni qoldiring — mutaxassis vazifani aniqlaydi, mos granit turlarini taklif qiladi va hisob-kitob tayyorlaydi.",
     objectTypeLegend: "Obyekt turi",
     objectTypes: ["Xususiy obyekt", "Tijorat obyekti"],
     areaLegend: "Obyekt maydoni",
@@ -418,9 +431,10 @@ const uz: typeof ru = {
   map: {
     eyebrow: "Bizning manzil",
     title: "Twinstone xaritada",
-    caption: "Shouruмga tashrif buyuring yoki O'zbekiston bo'ylab yetkazib berishni hisoblash uchun bog'laning",
+    caption:
+      "Granit namunalarini jonli ko'rish uchun tashrif buyuring yoki O'zbekiston bo'ylab yetkazib berishni hisoblash uchun bog'laning",
     mapAria: "Twinstone joylashuvi ko'rsatilgan xarita",
-    fabricAlt: "Twinstone ishlab chiqarish maydonchasi",
+    fabricAlt: "Twinstone granit buyumlari ishlab chiqarishi",
     addressLabel: "Manzil",
     phoneLabel: "Telefon",
     ctaDirections: "Yo'nalishni ko'rsatish",
@@ -428,53 +442,53 @@ const uz: typeof ru = {
   },
   cases: {
     eyebrow: "Loyihalar",
-    title: "Amalga oshirilgan obyektlar",
+    title: "Granitimiz ishlatilgan obyektlar",
     backLink: "← Barcha loyihalar",
     items: {
       "moshchenie-zhk": {
-        title: "Turar-joy majmuasi hududini mostovoy qilish",
+        title: "Turar-joy majmuasi hududiga granit yotqizish",
         city: "Toshkent",
         category: "Turar-joy majmuasi",
-        description: "Piyodalar hududini mostovoy qilish",
+        description: "Piyodalar zonasi uchun granit bruschatka va bordyurlar",
       },
       "vhodnaya-gruppa-kontrast": {
-        title: "Kontrastli mostovoyli kirish guruhi",
+        title: "Ikki xil rangdagi granitdan kirish guruhi",
         city: "Toshkent",
         category: "Kirish guruhi",
-        description: "Tabiiy toshning kontrastli terilishi",
+        description: "Och va to'q rangli granitning kontrastli terilishi",
       },
       "obshchestvennoe-prostranstvo": {
-        title: "Mostovoyli jamoat maydoni",
+        title: "Granitdan jamoat maydoni",
         city: "Toshkent",
         category: "Jamoat maydoni",
-        description: "Yuqori yuklamali zona uchun qoplama",
+        description: "Yuqori yuklamali zona uchun termoishlov berilgan granit plitalar",
       },
       "vhod-v-magazin": {
         title: "Savdo maydonining kirish guruhi",
         city: "Toshkent",
         category: "Tijorat binosi",
-        description: "Kirish qismida kontrastli bruschatka va granit zinapoyalar",
+        description: "Sokl qoplamasi va sirpanishga qarshi ishlov berilgan granit zinapoyalar",
       },
       "alleya-v-parke": {
-        title: "Parkdagi piyodalar allasi",
+        title: "Parkdagi granit xiyobon",
         city: "Toshkent",
         category: "Park",
-        description: "Granit bordyurli sayr yo'lkasini mostovoy qilish",
+        description: "Sayr yo'lkasi uchun granit bruschatka va bordyur",
       },
       "ploschad-sportkompleksa": {
-        title: "Sport kompleksi oldidagi maydon",
+        title: "Sport kompleksi oldidagi granit maydon",
         city: "Toshkent",
         category: "Sport kompleksi",
-        description: "Atrofdagi hudud va dam olish zonasini mostovoy qilish",
+        description: "Atrofdagi hudud va dam olish zonasida granit plitalar",
       },
     },
   },
   delivery: {
     eyebrow: "Yetkazib berish",
     title: "Buyurtmani olishning qulay usulini kelishamiz",
-    imageAlt: "Kran-manipulyator yordamida mahsulot paletlarini yuklash",
-    checklist: ["Buyumlarning ishonchli qadoqlanishi", "Mahsulot uchun hujjatlar", "Kelishilgan jo'natish sanasi"],
-    note: "O'zi olib ketish mavjud. Yetkazib berish imkoniyati va narxi hajm, qadoqlash va obyekt manziliga qarab alohida hisoblanadi.",
+    imageAlt: "Paletlardagi granit buyumlarni jo'natish uchun yuklash",
+    checklist: ["Paletlarda ishonchli bog'langan granit", "Tosh uchun hujjatlar", "Kelishilgan jo'natish sanasi"],
+    note: "O'zi olib ketish mavjud. Yetkazib berish imkoniyati va narxi hajm, partiya og'irligi va obyekt manziliga qarab alohida hisoblanadi.",
   },
   partners: {
     title: "Loyihalar bizga ishonadi",
@@ -484,24 +498,34 @@ const uz: typeof ru = {
     title: "Ko'p beriladigan savollar",
     items: [
       {
-        question: "Ko'cha uchun qanday ishlovni tanlash kerak?",
+        question: "Ko'cha uchun granitga qanday ishlov tanlash kerak?",
         answer:
-          "Zinapoya va mostovoy uchun odatda termoishlov ko'rgan yoki yorilgan sirt qo'llaniladi: u yaqqol ko'rinadi va tashqi zonalar uchun yaxshiroq mos keladi. Yakuniy variant obyektning yuklamasi va arxitekturasiga qarab tanlanadi.",
+          "Zinapoya va yo'lkalar uchun termoishlov, bucharda yoki yorilgan sirt qo'llaniladi: u g'adir-budur bo'lib, qishda va yomg'irdan keyin sirpanmaydi. Pardozlangan granit fasad va interyerlar uchun ko'proq mos keladi.",
+      },
+      {
+        question: "Granit beton plitkadan nimasi bilan yaxshi?",
+        answer:
+          "Tabiiy granit mustahkamroq, rangi o'chmaydi, yuzlab muzlash-erish sikllariga chidaydi va almashtirishsiz o'nlab yillar xizmat qiladi. Shuning uchun u yuqori yuklamali kirish guruhlari, maydonlar va fasadlar uchun tanlanadi.",
       },
       {
         question: "Qanday o'lchamlar mavjud?",
         answer:
-          "Asosiy mahalliy granit turlari uchun 18 va 30 mm qalinlikdagi plitalar va bir nechta format mavjud. Kerakli o'lcham va nostandart elementlarni tayyorlash imkoniyati hisob-kitob paytida aniqlanadi.",
+          "Asosiy granit turlari uchun 18 va 30 mm qalinlikdagi plitalar 200×400 dan 600×1500 mm gacha formatlarda mavjud. Nostandart o'lchamlar, zinapoyalar, bordyurlar va boshqa elementlarni loyiha bo'yicha kesamiz.",
       },
       {
-        question: "Faqat materialni montajsiz buyurtma qilish mumkinmi?",
+        question: "Granit namunalarini ko'rish mumkinmi?",
         answer:
-          "Ha. Sahifa buyumlarni tanlash, tayyorlash va jo'natishga mo'ljallangan. Ishlar tarkibi va qo'shimcha xizmatlar alohida kelishiladi.",
+          "Ha. Ishlab chiqarishimizga keling — barcha granit turlarining turli sirt ishlovidagi namunalarini ko'rsatamiz. Tabiiy tosh rangini jonli ko'rib tanlagan ma'qul.",
+      },
+      {
+        question: "Faqat granitni montajsiz buyurtma qilish mumkinmi?",
+        answer:
+          "Ha. Biz granit buyumlarni tayyorlaymiz va jo'natamiz. Montaj va qo'shimcha xizmatlar alohida kelishiladi.",
       },
       {
         question: "Narx qanday hisoblanadi?",
         answer:
-          "Narx tosh turi, qalinligi, formati, sirt ishlovi, hajmi va buyurtmani olish shartlariga bog'liq. Qisqa brifingdan so'ng mutaxassis individual hisob-kitob tayyorlaydi.",
+          "Narx granit turi, qalinligi, formati, sirt ishlovi, hajmi va buyurtmani olish shartlariga bog'liq. Qisqa brifingdan so'ng mutaxassis individual hisob-kitob tayyorlaydi.",
       },
       {
         question: "Yetkazib berish bormi?",
@@ -515,7 +539,7 @@ const uz: typeof ru = {
     button: "Ariza qoldirish",
   },
   footer: {
-    tagline: "O'zbekistonda fasadlar, mostovoy, zinapoyalar va obodonlashtirish uchun tabiiy granit.",
+    tagline: "O'zbekistonda fasadlar, yo'lkalar, zinapoyalar va obodonlashtirish uchun tabiiy granit buyumlar.",
     address: "Buyuk Ipak Yo'li ko'chasi, 434, «Mirzo Ulug'bek» kichik sanoat zonasi, Toshkent",
     copyright: "© 2026 Twinstone. Barcha huquqlar himoyalangan.",
   },

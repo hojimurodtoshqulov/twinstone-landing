@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# original (uncompressed) photos — only the optimized/ versions are committed
+/public/images/granit/*.JPG
+/public/images/granit/*.jpg
+/public/images/granit/*.png

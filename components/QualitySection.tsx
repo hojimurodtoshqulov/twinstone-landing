@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { CheckIcon, LayersIcon, RulerIcon } from "@/components/ui/Icons";
 import { qualityFeatures } from "@/data/quality";
+import { siteImages } from "@/data/images";
 
 const icons = {
   check: CheckIcon,
@@ -47,7 +48,8 @@ export default function QualitySection() {
 
           <div className="relative aspect-square overflow-hidden rounded-2xl">
             <Image
-              src="/images/11.jpg"
+              src={siteImages.quality}
+              style={{ objectPosition: siteImages.qualityPosition }}
               alt={t("quality.imageAlt")}
               fill
               className="object-cover"

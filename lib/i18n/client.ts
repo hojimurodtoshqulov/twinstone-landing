@@ -15,6 +15,11 @@ if (!i18next.isInitialized) {
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
   });
+} else {
+  // Hot reload re-runs this module with fresh resources; push them into the existing instance.
+  for (const [lng, bundle] of Object.entries(resources)) {
+    i18next.addResourceBundle(lng, "translation", bundle.translation, true, true);
+  }
 }
 
 export default i18next;

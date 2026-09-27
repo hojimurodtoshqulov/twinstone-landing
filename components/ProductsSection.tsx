@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Chip from "@/components/ui/Chip";
-import { additionalProducts, pavingShapes, products } from "@/data/products";
+import { additionalProducts, products, surfaceFinishes } from "@/data/products";
 
 export default function ProductsSection() {
   const { t } = useTranslation();
@@ -31,6 +31,7 @@ export default function ProductsSection() {
                   alt={t(`products.items.${product.slug}.title`)}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={product.position ? { objectPosition: product.position } : undefined}
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                 />
               </div>
@@ -56,10 +57,10 @@ export default function ProductsSection() {
             </div>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-stone-950">{t("products.shapesTitle")}</h3>
+            <h3 className="text-sm font-semibold text-stone-950">{t("products.finishesTitle")}</h3>
             <div className="mt-3 flex flex-wrap gap-2">
-              {pavingShapes.map((slug) => (
-                <Chip key={slug}>{t(`products.shapes.${slug}`)}</Chip>
+              {surfaceFinishes.map((slug) => (
+                <Chip key={slug}>{t(`products.finishes.${slug}`)}</Chip>
               ))}
             </div>
           </div>
