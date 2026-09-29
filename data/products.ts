@@ -1,7 +1,7 @@
 import type { ProductItem } from "./types";
 
 export const products: ProductItem[] = [
-  { slug: "granitnye-plity", image: "/images/products/natural-granite.webp" },
+  { slug: "granitnye-plity", image: "/images/granit/optimized/artboard-3.webp" },
   { slug: "granitnaya-bruschatka", image: "/images/granit/optimized/dsc5626.webp" },
   {
     slug: "granitnye-stupeni",

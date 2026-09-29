@@ -1,10 +1,10 @@
 import type { CaseItem } from "./types";
 
 export const cases: CaseItem[] = [
-  { slug: "moshchenie-zhk", image: "/images/project-residential.webp" },
-  { slug: "vhodnaya-gruppa-kontrast", image: "/images/project-hotel.webp" },
-  { slug: "obshchestvennoe-prostranstvo", image: "/images/project-public.webp" },
-  { slug: "vhod-v-magazin", image: "/images/project-storefront.jpg" },
-  { slug: "alleya-v-parke", image: "/images/project-park-walkway.jpg" },
-  { slug: "ploschad-sportkompleksa", image: "/images/project-plaza.png" },
+  { slug: "alleya-s-fonaryami", image: "/images/granit/optimized/case-alley.webp" },
+  { slug: "ploshchad-s-fontanom", image: "/images/granit/optimized/case-fountain-square.webp" },
+  { slug: "vhodnaya-zona-s-arkoy", image: "/images/granit/optimized/case-arch.webp" },
+  { slug: "zona-otdyha", image: "/images/granit/optimized/case-rest-zone.webp" },
+  { slug: "sadovye-dorozhki", image: "/images/granit/optimized/case-garden-paths.webp" },
+  { slug: "peshehodnaya-dorozhka", image: "/images/granit/optimized/case-walkway.webp" },
 ];

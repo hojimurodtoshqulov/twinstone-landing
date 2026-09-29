@@ -174,48 +174,48 @@ const ru = {
     title: "Объекты из нашего гранита",
     backLink: "← Все проекты",
     items: {
-      "moshchenie-zhk": {
-        title: "Гранитное мощение территории жилого комплекса",
+      "alleya-s-fonaryami": {
+        title: "Гранитная аллея с декоративными фонарями",
         city: "Ташкент",
-        category: "Жилой комплекс",
-        description: "Гранитная брусчатка и бордюры для пешеходной зоны",
+        category: "Парковая аллея",
+        description: "Светлые гранитные плиты пешеходной аллеи с тактильной полосой",
       },
-      "vhodnaya-gruppa-kontrast": {
-        title: "Входная группа из гранита двух оттенков",
+      "ploshchad-s-fontanom": {
+        title: "Гранитная площадь у фонтана",
         city: "Ташкент",
-        category: "Входная группа",
-        description: "Контрастная раскладка светлого и тёмного гранита",
+        category: "Центральная площадь",
+        description: "Лучевые гранитные дорожки между цветниками и газонами",
       },
-      "obshchestvennoe-prostranstvo": {
-        title: "Общественное пространство из гранита",
+      "vhodnaya-zona-s-arkoy": {
+        title: "Входная зона парка с аркой",
         city: "Ташкент",
-        category: "Общественное пространство",
-        description: "Термообработанные гранитные плиты для зоны с высокой нагрузкой",
+        category: "Входная зона",
+        description: "Широкое мощение из гранитных плит вокруг декоративной арки",
       },
-      "vhod-v-magazin": {
-        title: "Входная группа торгового помещения",
+      "zona-otdyha": {
+        title: "Гранитная зона отдыха",
         city: "Ташкент",
-        category: "Коммерческое здание",
-        description: "Облицовка цоколя и гранитные ступени с противоскользящей обработкой",
+        category: "Зона отдыха",
+        description: "Крупноформатные гранитные плиты под скамейками и вдоль газонов",
       },
-      "alleya-v-parke": {
-        title: "Гранитная аллея в парке",
+      "sadovye-dorozhki": {
+        title: "Гранитные дорожки в саду",
         city: "Ташкент",
         category: "Парк",
-        description: "Гранитная брусчатка и бордюр прогулочной дорожки",
+        description: "Узкие гранитные дорожки между клумбами с подсветкой",
       },
-      "ploschad-sportkompleksa": {
-        title: "Гранитная площадь у спортивного комплекса",
+      "peshehodnaya-dorozhka": {
+        title: "Пешеходная дорожка вдоль озеленения",
         city: "Ташкент",
-        category: "Спортивный комплекс",
-        description: "Гранитные плиты на прилегающей территории и в зоне отдыха",
+        category: "Пешеходная зона",
+        description: "Гранитное мощение прогулочной дорожки рядом с велодорожкой",
       },
     },
   },
   delivery: {
     eyebrow: "Доставка",
     title: "Согласуем удобный способ получения заказа",
-    imageAlt: "Погрузка гранитных изделий на поддонах для отгрузки",
+    imageAlt: "Погрузка гранитных плит манипулятором в грузовик для отгрузки",
     checklist: ["Гранит на поддонах в надёжной обвязке", "Документы на камень", "Согласованная дата отгрузки"],
     note: "Доступен самовывоз. Возможность и стоимость доставки рассчитываются отдельно с учётом объёма, веса партии и адреса объекта.",
   },
@@ -445,48 +445,48 @@ const uz: typeof ru = {
     title: "Granitimiz ishlatilgan obyektlar",
     backLink: "← Barcha loyihalar",
     items: {
-      "moshchenie-zhk": {
-        title: "Turar-joy majmuasi hududiga granit yotqizish",
+      "alleya-s-fonaryami": {
+        title: "Dekorativ chiroqli granit xiyobon",
         city: "Toshkent",
-        category: "Turar-joy majmuasi",
-        description: "Piyodalar zonasi uchun granit bruschatka va bordyurlar",
+        category: "Park xiyoboni",
+        description: "Taktil yo'lakli piyodalar xiyoboni uchun och rangli granit plitalar",
       },
-      "vhodnaya-gruppa-kontrast": {
-        title: "Ikki xil rangdagi granitdan kirish guruhi",
+      "ploshchad-s-fontanom": {
+        title: "Favvora yonidagi granit maydon",
         city: "Toshkent",
-        category: "Kirish guruhi",
-        description: "Och va to'q rangli granitning kontrastli terilishi",
+        category: "Markaziy maydon",
+        description: "Gulzorlar va maysazorlar orasidagi nurli granit yo'lkalar",
       },
-      "obshchestvennoe-prostranstvo": {
-        title: "Granitdan jamoat maydoni",
+      "vhodnaya-zona-s-arkoy": {
+        title: "Arkali park kirish zonasi",
         city: "Toshkent",
-        category: "Jamoat maydoni",
-        description: "Yuqori yuklamali zona uchun termoishlov berilgan granit plitalar",
+        category: "Kirish zonasi",
+        description: "Dekorativ arka atrofidagi keng granit plita qoplamasi",
       },
-      "vhod-v-magazin": {
-        title: "Savdo maydonining kirish guruhi",
+      "zona-otdyha": {
+        title: "Granitdan dam olish zonasi",
         city: "Toshkent",
-        category: "Tijorat binosi",
-        description: "Sokl qoplamasi va sirpanishga qarshi ishlov berilgan granit zinapoyalar",
+        category: "Dam olish zonasi",
+        description: "O'rindiqlar ostida va maysazor bo'ylab katta formatli granit plitalar",
       },
-      "alleya-v-parke": {
-        title: "Parkdagi granit xiyobon",
+      "sadovye-dorozhki": {
+        title: "Bog'dagi granit yo'lkalar",
         city: "Toshkent",
         category: "Park",
-        description: "Sayr yo'lkasi uchun granit bruschatka va bordyur",
+        description: "Yoritilgan gulzorlar orasidagi tor granit yo'lkalar",
       },
-      "ploschad-sportkompleksa": {
-        title: "Sport kompleksi oldidagi granit maydon",
+      "peshehodnaya-dorozhka": {
+        title: "Ko'kalamzor bo'ylab piyodalar yo'lagi",
         city: "Toshkent",
-        category: "Sport kompleksi",
-        description: "Atrofdagi hudud va dam olish zonasida granit plitalar",
+        category: "Piyodalar zonasi",
+        description: "Velosiped yo'lagi yonidagi sayr yo'lkasi uchun granit qoplama",
       },
     },
   },
   delivery: {
     eyebrow: "Yetkazib berish",
     title: "Buyurtmani olishning qulay usulini kelishamiz",
-    imageAlt: "Paletlardagi granit buyumlarni jo'natish uchun yuklash",
+    imageAlt: "Granit plitalarni manipulyator yordamida yuk mashinasiga yuklash",
     checklist: ["Paletlarda ishonchli bog'langan granit", "Tosh uchun hujjatlar", "Kelishilgan jo'natish sanasi"],
     note: "O'zi olib ketish mavjud. Yetkazib berish imkoniyati va narxi hajm, partiya og'irligi va obyekt manziliga qarab alohida hisoblanadi.",
   },

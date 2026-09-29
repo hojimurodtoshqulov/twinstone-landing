@@ -3,9 +3,9 @@
  * swapped for new granite photography without touching components.
  */
 export const siteImages = {
-  hero: "/images/project-park-walkway.jpg",
+  hero: "/images/granit/optimized/showcase.webp",
   quality: "/images/granit/optimized/dsc5620.webp",
   /** Crop of the tall quality photo inside its square frame. */
   qualityPosition: "50% 40%",
-  delivery: "/images/dostavka-bruschatka.jpg",
+  delivery: "/images/twinstone-delivery.webp",
 };

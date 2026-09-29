@@ -16,9 +16,7 @@ export default function Footer() {
       <Container>
         <div className="flex flex-col gap-10 sm:flex-row sm:justify-between">
           <div>
-            <div className="inline-flex rounded-xl bg-white px-3 py-2.5">
-              <Logo className="h-7 w-auto" />
-            </div>
+            <Logo variant="light" className="h-10 w-auto" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-stone-400">
               {t("footer.tagline")}
             </p>

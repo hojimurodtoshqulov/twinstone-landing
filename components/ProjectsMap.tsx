@@ -22,7 +22,7 @@ export default function ProjectsMap() {
 
         <div className="mx-auto mt-12 overflow-hidden rounded-3xl border border-stone-200 shadow-sm sm:mt-14">
           <Image
-            src="/images/Twinstone_fabric.png"
+            src="/images/twinstone-fabric-navoiy.png"
             alt={t("map.fabricAlt")}
             width={2054}
             height={766}

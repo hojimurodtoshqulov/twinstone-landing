@@ -65,5 +65,5 @@ scripts/
 | Каталог гранита | `granite-kuksaroy-pink.webp`, `granite-kuksaroy-gray.webp`, `granite-aurora.webp`, `granite-nero.webp`, `granite-suvlik.webp`, `granite-kushrabot.webp` — исходники тёмные (недоэкспонированы), карточки в `GraniteCatalog.tsx` вытягивают их CSS-фильтром `brightness-[1.9]`, не трогая сами файлы |
 | Производство и обработка | `production.webp` — контейнер `aspect-video`, чтобы не обрезать флаг слева по краю кадра |
 | Доставка | `dostavka-bruschatka.jpg` |
-| Реализованные объекты (кейсы) | `project-residential.webp`, `project-hotel.webp`, `project-public.webp` — используются и на страницах `/granit/cases/[slug]` |
+| Реализованные объекты (кейсы) | `granit/optimized/case-*.webp` (сжатые копии фото из `granit/ishlar/`) — используются и на страницах `/granit/cases/[slug]` |
 | Логотипы партнёров | `partners/akay-city.webp`, `partners/nurafshon-business-city.webp`, `partners/enter-engineering.webp`, `partners/modera-towers.webp`. Файл `enter-engineering.webp` — не копия исходника: у `project-enter.webp` альфа-канал был экспортирован обрезанным до ~20% (лого было практически невидимым), `fix-enter-logo-alpha.mjs` растягивает альфу до полного диапазона и сохраняет исправленную копию сюда |
