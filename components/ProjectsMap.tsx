@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { MapPinIcon, PhoneIcon } from "@/components/ui/Icons";
 import { siteConfig } from "@/data/nav";
+import { trackMetaEvent } from "@/lib/metaPixel";
 
 const MAP_EMBED_SRC =
   "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3417524.082119582!2d65.0398069981926!3d40.872643335923286!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDM0JzIxLjkiTiA2NcKwMzknMzkuMiJF!5e0!3m2!1sru!2s!4v1789716980805!5m2!1sru!2s";
@@ -59,7 +60,11 @@ export default function ProjectsMap() {
                 </span>
                 <div>
                   <h3 className="text-sm font-semibold text-white">{t("map.phoneLabel")}</h3>
-                  <a href={siteConfig.phoneHref} className="mt-1 block text-sm text-white/70 transition-colors hover:text-white">
+                  <a
+                    href={siteConfig.phoneHref}
+                    onClick={() => trackMetaEvent("Contact")}
+                    className="mt-1 block text-sm text-white/70 transition-colors hover:text-white"
+                  >
                     {siteConfig.phone}
                   </a>
                 </div>

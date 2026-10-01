@@ -8,6 +8,7 @@ import { useLanguage } from "@/lib/i18n/useLanguage";
 import { CloseIcon, MenuIcon, PhoneIcon } from "@/components/ui/Icons";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
+import { trackMetaEvent } from "@/lib/metaPixel";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -68,6 +69,7 @@ export default function Header() {
 
             <a
               href={siteConfig.phoneHref}
+              onClick={() => trackMetaEvent("Contact")}
               className="hidden items-center gap-2 rounded-full py-1.5 pl-1.5 pr-3 text-sm font-semibold text-stone-950 transition-colors hover:bg-stone-100 md:inline-flex"
             >
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent/10 text-accent">
@@ -143,7 +145,11 @@ export default function Header() {
           >
             {language === "ru" ? "RU / UZ" : "UZ / RU"}
           </button>
-          <a href={siteConfig.phoneHref} className="inline-flex items-center gap-2 text-base font-semibold text-stone-950">
+          <a
+            href={siteConfig.phoneHref}
+            onClick={() => trackMetaEvent("Contact")}
+            className="inline-flex items-center gap-2 text-base font-semibold text-stone-950"
+          >
             <PhoneIcon className="h-4 w-4 text-accent" />
             {siteConfig.phone}
           </a>

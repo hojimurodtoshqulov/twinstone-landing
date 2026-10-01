@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { CheckIcon } from "@/components/ui/Icons";
+import { trackMetaEvent } from "@/lib/metaPixel";
 
 function formatPhone(raw: string): string {
   const digits = raw.replace(/\D/g, "").replace(/^998/, "");
@@ -30,6 +31,7 @@ export default function LeadForm() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSubmitted(true);
+    trackMetaEvent("Lead");
   }
 
   return (

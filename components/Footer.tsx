@@ -6,6 +6,7 @@ import Logo from "@/components/ui/Logo";
 import { MailIcon, MapPinIcon, PhoneIcon } from "@/components/ui/Icons";
 import { useLanguage } from "@/lib/i18n/useLanguage";
 import { siteConfig } from "@/data/nav";
+import { trackMetaEvent } from "@/lib/metaPixel";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -23,7 +24,11 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-3 text-sm">
-            <a href={siteConfig.phoneHref} className="flex items-center gap-2 text-stone-200 hover:text-white">
+            <a
+              href={siteConfig.phoneHref}
+              onClick={() => trackMetaEvent("Contact")}
+              className="flex items-center gap-2 text-stone-200 hover:text-white"
+            >
               <PhoneIcon className="h-4 w-4 text-accent" />
               {siteConfig.phone}
             </a>
