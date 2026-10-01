@@ -25,8 +25,8 @@ export default function ProjectsMap() {
           <Image
             src="/images/twinstone-fabric-navoiy.png"
             alt={t("map.fabricAlt")}
-            width={2054}
-            height={766}
+            width={1920}
+            height={716}
             sizes="100vw"
             className="h-auto w-full"
           />
