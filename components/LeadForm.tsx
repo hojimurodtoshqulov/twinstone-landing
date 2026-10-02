@@ -25,13 +25,35 @@ export default function LeadForm() {
 
   const [objectTypeIndex, setObjectTypeIndex] = useState(0);
   const [areaIndex, setAreaIndex] = useState(0);
+  const [name, setName] = useState("");
   const [phone, setPhone] = useState("+998");
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
-    trackMetaEvent("Lead");
+    if (phone.replace(/\D/g, "").length !== 12) {
+      setError(t("leadForm.phoneInvalid"));
+      return;
+    }
+
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, objectType: objectTypeIndex, area: areaIndex }),
+      });
+      if (!res.ok) throw new Error(`Lead request failed: ${res.status}`);
+      setSubmitted(true);
+      trackMetaEvent("Lead");
+    } catch {
+      setError(t("leadForm.sendError"));
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -121,6 +143,23 @@ export default function LeadForm() {
               </fieldset>
 
               <div>
+                <label htmlFor="name" className="mb-3 block text-sm font-semibold text-stone-950">
+                  {t("leadForm.nameLabel")}
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autoComplete="name"
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder={t("leadForm.namePlaceholder")}
+                  className="w-full rounded-xl border border-stone-200 px-4 py-3.5 text-base text-stone-950 outline-none transition-colors focus:border-accent"
+                />
+              </div>
+
+              <div>
                 <label htmlFor="phone" className="mb-3 block text-sm font-semibold text-stone-950">
                   {t("leadForm.phoneLabel")}
                 </label>
@@ -136,11 +175,18 @@ export default function LeadForm() {
                 />
               </div>
 
+              {error && (
+                <p role="alert" className="-mt-4 text-sm text-red-600">
+                  {error}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
+                disabled={sending}
+                className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-dark disabled:cursor-wait disabled:opacity-70"
               >
-                {t("leadForm.submit")}
+                {sending ? t("leadForm.sending") : t("leadForm.submit")}
               </button>
 
               <p className="text-center text-xs leading-relaxed text-stone-500">
