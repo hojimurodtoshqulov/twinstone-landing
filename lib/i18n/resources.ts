@@ -144,6 +144,8 @@ const ru = {
     title: "Получите подбор гранита и стоимости",
     description:
       "Оставьте телефон — специалист уточнит задачу, предложит подходящие виды гранита и подготовит расчёт.",
+    productTypeLegend: "Что вас интересует",
+    productTypes: ["Брусчатка", "Гранит"],
     objectTypeLegend: "Тип объекта",
     objectTypes: ["Частный объект", "Коммерческий объект"],
     areaLegend: "Площадь объекта",
@@ -421,6 +423,8 @@ const uz: typeof ru = {
     title: "Granit tanlovi va narxini oling",
     description:
       "Telefon raqamingizni qoldiring — mutaxassis vazifani aniqlaydi, mos granit turlarini taklif qiladi va hisob-kitob tayyorlaydi.",
+    productTypeLegend: "Mahsulot turi",
+    productTypes: ["Bruschatka", "Granit"],
     objectTypeLegend: "Obyekt turi",
     objectTypes: ["Xususiy obyekt", "Tijorat obyekti"],
     areaLegend: "Obyekt maydoni",

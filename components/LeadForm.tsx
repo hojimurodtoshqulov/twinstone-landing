@@ -20,9 +20,11 @@ function formatPhone(raw: string): string {
 
 export default function LeadForm() {
   const { t } = useTranslation();
+  const productTypes = t("leadForm.productTypes", { returnObjects: true }) as string[];
   const objectTypes = t("leadForm.objectTypes", { returnObjects: true }) as string[];
   const areaOptions = t("leadForm.areaOptions", { returnObjects: true }) as string[];
 
+  const [productTypeIndex, setProductTypeIndex] = useState(0);
   const [objectTypeIndex, setObjectTypeIndex] = useState(0);
   const [areaIndex, setAreaIndex] = useState(0);
   const [name, setName] = useState("");
@@ -44,7 +46,13 @@ export default function LeadForm() {
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone, objectType: objectTypeIndex, area: areaIndex }),
+        body: JSON.stringify({
+          name,
+          phone,
+          productType: productTypeIndex,
+          objectType: objectTypeIndex,
+          area: areaIndex,
+        }),
       });
       if (!res.ok) throw new Error(`Lead request failed: ${res.status}`);
       setSubmitted(true);
@@ -86,6 +94,34 @@ export default function LeadForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+              <fieldset>
+                <legend className="mb-3 text-sm font-semibold text-stone-950">
+                  {t("leadForm.productTypeLegend")}
+                </legend>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {productTypes.map((type, index) => (
+                    <label
+                      key={type}
+                      className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3.5 text-sm font-medium transition-colors ${
+                        productTypeIndex === index
+                          ? "border-accent bg-accent text-white"
+                          : "border-stone-200 text-stone-700 hover:border-stone-400"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="productType"
+                        value={type}
+                        checked={productTypeIndex === index}
+                        onChange={() => setProductTypeIndex(index)}
+                        className="sr-only"
+                      />
+                      {type}
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+
               <fieldset>
                 <legend className="mb-3 text-sm font-semibold text-stone-950">
                   {t("leadForm.objectTypeLegend")}

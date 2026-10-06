@@ -19,7 +19,13 @@ export async function POST(request: Request) {
     return Response.json({ ok: false }, { status: 500 });
   }
 
-  let body: { name?: unknown; phone?: unknown; objectType?: unknown; area?: unknown };
+  let body: {
+    name?: unknown;
+    phone?: unknown;
+    productType?: unknown;
+    objectType?: unknown;
+    area?: unknown;
+  };
   try {
     body = await request.json();
   } catch {
@@ -28,10 +34,11 @@ export async function POST(request: Request) {
 
   const name = typeof body.name === "string" ? body.name.trim().slice(0, 100) : "";
   const phone = typeof body.phone === "string" ? body.phone.trim() : "";
+  const productType = labels.productTypes[Number(body.productType)];
   const objectType = labels.objectTypes[Number(body.objectType)];
   const area = labels.areaOptions[Number(body.area)];
 
-  if (!name || phone.replace(/\D/g, "").length !== 12 || !objectType || !area) {
+  if (!name || phone.replace(/\D/g, "").length !== 12 || !productType || !objectType || !area) {
     return Response.json({ ok: false }, { status: 400 });
   }
 
@@ -40,6 +47,7 @@ export async function POST(request: Request) {
     "",
     `<b>${labels.nameLabel}:</b> ${escapeHtml(name)}`,
     `<b>${labels.phoneLabel}:</b> ${escapeHtml(phone)}`,
+    `<b>${labels.productTypeLegend}:</b> ${productType}`,
     `<b>${labels.objectTypeLegend}:</b> ${objectType}`,
     `<b>${labels.areaLegend}:</b> ${area}`,
   ].join("\n");
